@@ -6,7 +6,10 @@ app = FastAPI(title="SPUF-314 BMTC Backend")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+     allow_origins=[
+        "https://spuf-314-frontend.vercel.app",
+        "http://localhost:5173"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
